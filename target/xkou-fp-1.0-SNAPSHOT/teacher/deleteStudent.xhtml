@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="../WEB-INF/template/demoTemplate.xhtml"
+                xmlns:ezcomp="http://xmlns.jcp.org/jsf/composite/ezcomp">
+
+    <ui:define name="title">
+        Student Delete Page
+    </ui:define>
+
+    <ui:define name="content">
+        
+        <h2>Are you sure you want to delete #{teacherNewStudentController.stu.name}?</h2>
+        
+        <ezcomp:student student="#{teacherNewStudentController.stu}"
+                        operation="delete"
+                        action="#{teacherNewStudentController.deleteStu()}"/> 
+        
+    </ui:define>
+
+</ui:composition>

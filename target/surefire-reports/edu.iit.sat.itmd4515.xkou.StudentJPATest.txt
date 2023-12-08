@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: edu.iit.sat.itmd4515.xkou.StudentJPATest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.954 s - in edu.iit.sat.itmd4515.xkou.StudentJPATest
