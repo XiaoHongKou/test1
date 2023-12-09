@@ -22,11 +22,13 @@ public class StudentConverter implements Converter<Student>{
     @EJB StudentService studentSvc;
     
     /**
+     * Converts a String value (such as an ID) to a Student object.
+     * This is typically used when converting form submission data back into entity objects.
      *
-     * @param context
-     * @param component
-     * @param value
-     * @return
+     * @param context The FacesContext current instance.
+     * @param component The UIComponent with which this converter is associated.
+     * @param value The string value to be converted to a Student object.
+     * @return The Student object that corresponds to the provided string value.
      */
     @Override
     public Student getAsObject(FacesContext context, UIComponent component, String value) {
@@ -35,11 +37,13 @@ public class StudentConverter implements Converter<Student>{
     }
 
     /**
+     * Converts a Student object to its String representation, typically the ID.
+     * This is used when rendering an entity as a string in the UI, such as in dropdown menus or links.
      *
-     * @param context
-     * @param component
-     * @param value
-     * @return
+     * @param context The FacesContext current instance.
+     * @param component The UIComponent with which this converter is associated.
+     * @param value The Student object to be converted to a string.
+     * @return A string representation of the Student object, typically its ID.
      */
     @Override
     public String getAsString(FacesContext context, UIComponent component, Student value) {

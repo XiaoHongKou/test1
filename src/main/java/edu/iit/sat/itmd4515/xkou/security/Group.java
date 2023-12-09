@@ -30,15 +30,17 @@ public class Group {
     private List<User> users = new ArrayList<>();
 
     /**
-     *
+     * Default constructor for creating an empty Group instance.
      */
     public Group() {
     }
 
     /**
      *
-     * @param groupName
-     * @param groupDescription
+     * Constructor for creating a Group instance with a specified name and description.
+     * 
+     * @param groupName The name of the group.
+     * @param groupDescription A brief description of the group.
      */
     public Group(String groupName, String groupDescription) {
         this.groupName = groupName;
@@ -66,7 +68,9 @@ public class Group {
 
     /**
      *
-     * @return
+     * Get the value of groupDescription
+     * 
+     * @return the value of groupDescription
      */
     public String getGroupDescription() {
         return groupDescription;
@@ -74,7 +78,9 @@ public class Group {
 
     /**
      *
-     * @param groupDescription
+     * Set the value of groupDescription
+     * 
+     * @param groupDescription new value of groupDescription
      */
     public void setGroupDescription(String groupDescription) {
         this.groupDescription = groupDescription;
@@ -82,7 +88,9 @@ public class Group {
 
     /**
      *
-     * @return
+     * Get the value of User
+     * 
+     * @return the value of User
      */
     public List<User> getUsers() {
         return users;
@@ -90,7 +98,9 @@ public class Group {
 
     /**
      *
-     * @param users
+     * Set the value of users
+     * 
+     * @param users new value of users
      */
     public void setUsers(List<User> users) {
         this.users = users;

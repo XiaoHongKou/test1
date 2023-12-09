@@ -51,16 +51,18 @@ public class LoanRecord {
     private Book book;
 
     /**
-     *
+     * Default constructor for creating an empty LoanRecord instance.
      */
     public LoanRecord() {
     }
 
     /**
      *
-     * @param date
-     * @param time
-     * @param type
+     * Constructor for creating a LoanRecord instance with specified date, time, and type.
+     * 
+     * @param date The date of the loan.
+     * @param time The time of the loan.
+     * @param type The type of the loan.
      */
     public LoanRecord(LocalDate date, LocalTime time, String type) {
         this.date = date;
@@ -69,10 +71,11 @@ public class LoanRecord {
     }
 
     /**
-     *
-     * @param t
-     * @param s
-     * @param b
+     *  Schedules a new loan involving a teacher, student, and book.
+     * 
+     * @param t The teacher involved in the loan.
+     * @param s The student involved in the loan.
+     * @param b The book involved in the loan.
      */
     public void schedLoan(Teacher t, Student s, Book b) {
         this.teacher = t;
@@ -91,9 +94,11 @@ public class LoanRecord {
     
     /**
      *
-     * @param t
-     * @param s
-     * @param b
+     * Removes a loan involving a specific teacher, student, and book.
+     * 
+     * @param t The teacher involved in the loan.
+     * @param s The student involved in the loan.
+     * @param b The book involved in the loan.
      */
     public void removeLoan(Teacher t, Student s, Book b) {
 
@@ -111,7 +116,7 @@ public class LoanRecord {
     }
     
     /**
-     *
+     * Removes the current loan from the associated teacher and book records.
      */
     public void removeLoan() {
 
@@ -129,16 +134,18 @@ public class LoanRecord {
     }
 
     /**
+     * Retrieves the ID of the loan record.
      *
-     * @return
+     * @return The ID of the loan record.
      */
     public Long getId() {
         return id;
     }
 
     /**
+     * Sets a new ID for the loan record.
      *
-     * @param id
+     * @param id The new ID to be set for the loan record.
      */
     public void setId(Long id) {
         this.id = id;
@@ -146,7 +153,9 @@ public class LoanRecord {
 
     /**
      *
-     * @return
+     * Generates a hash code for this loan record based on its ID.
+     * 
+     * @return A hash code value for this object.
      */
     @Override
     public int hashCode() {
@@ -157,8 +166,10 @@ public class LoanRecord {
 
     /**
      *
-     * @param obj
-     * @return
+     * Compares this loan record to another object for equality, based primarily on loan record ID.
+     * 
+     * @param obj The object to compare with this loan record.
+     * @return true if the given object represents a LoanRecord equivalent to this loan record, false otherwise.
      */
     @Override
     public boolean equals(Object obj) {
@@ -183,96 +194,108 @@ public class LoanRecord {
     }
 
     /**
+     * Retrieves the date of the loan record.
      *
-     * @return
+     * @return The date of the loan record.
      */
     public LocalDate getDate() {
         return date;
     }
 
     /**
+     * Sets a new date for the loan record.
      *
-     * @param date
+     * @param date The new date to be set for the loan record.
      */
     public void setDate(LocalDate date) {
         this.date = date;
     }
 
     /**
+     * Retrieves the time of the loan record.
      *
-     * @return
+     * @return The time of the loan record.
      */
     public LocalTime getTime() {
         return time;
     }
 
     /**
+     * Sets a new time for the loan record.
      *
-     * @param time
+     * @param time The new time to be set for the loan record.
      */
     public void setTime(LocalTime time) {
         this.time = time;
     }
 
     /**
+     * Retrieves the type of the loan record.
      *
-     * @return
+     * @return The type of the loan record.
      */
     public String getType() {
         return type;
     }
 
     /**
+     * Sets a new type for the loan record.
      *
-     * @param type
+     * @param type The new type to be set for the loan record.
      */
     public void setType(String type) {
         this.type = type;
     }
 
     /**
+     * Retrieves the teacher associated with the loan record.
      *
-     * @return
+     * @return The teacher associated with the loan record.
      */
     public Teacher getTeacher() {
         return teacher;
     }
 
     /**
+     * Sets a new teacher for the loan record.
      *
-     * @param teacher
+     * @param teacher The new teacher to be associated with the loan record.
      */
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
     }
 
     /**
+     * Retrieves the student associated with the loan record.
      *
-     * @return
+     * @return The student associated with the loan record.
      */
     public Student getStudent() {
         return student;
     }
 
     /**
+     * Sets a new student for the loan record.
      *
-     * @param student
+     * @param student The new student to be associated with the loan record.
      */
     public void setStudent(Student student) {
         this.student = student;
     }
 
     /**
+     * Retrieves the book associated with the loan record.
      *
-     * @return
+     * @return The book associated with the loan record.
      */
     public Book getBook() {
         return book;
     }
 
     /**
+     * Sets a new book for the loan record.
      *
-     * @param book
+     * @param book The new book to be associated with the loan record.
      */
     public void setBook(Book book) {
         this.book = book;
@@ -280,7 +303,9 @@ public class LoanRecord {
 
     /**
      *
-     * @return
+     * Returns a string representation of the LoanRecord object, including its ID, date, time, type, and associated teacher, student, and book.
+     * 
+     * @return A string representation of this loan record.
      */
     @Override
     public String toString() {

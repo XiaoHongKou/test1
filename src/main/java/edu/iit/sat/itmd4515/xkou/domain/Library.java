@@ -27,14 +27,14 @@ public class Library {
     private String name;
 
     /**
-     *
+     * Default constructor for creating an empty Library instance.
      */
     public Library() {
     }
 
     /**
      *
-     * @param name
+     * @param name The name of the library.
      */
     public Library(String name) {
         this.name = name;
@@ -60,8 +60,9 @@ public class Library {
     }
 
     /**
-     *
-     * @return
+     * Retrieves the unique identifier of the library.
+     * 
+     * @return The ID of the library.
      */
     public Long getId() {
         return id;
@@ -69,7 +70,7 @@ public class Library {
 
     /**
      *
-     * @param id
+     * @param id set library id
      */
     public void setId(Long id) {
         this.id = id;

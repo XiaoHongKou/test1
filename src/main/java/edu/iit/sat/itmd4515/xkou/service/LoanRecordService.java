@@ -17,7 +17,7 @@ import java.util.List;
 public class LoanRecordService extends AbstractService<LoanRecord>{
 
     /**
-     *
+     * Default constructor initializing with LoanRecord entity class.
      */
     public LoanRecordService() {
         super(LoanRecord.class);
@@ -25,7 +25,9 @@ public class LoanRecordService extends AbstractService<LoanRecord>{
     
     /**
      *
-     * @param lr
+     * Schedules a new LoanRecord.
+     * This involves creating a new LoanRecord entity and associating it with the relevant Teacher, Student, and Book entities.
+     * @param lr The LoanRecord entity carrying the data to be scheduled.
      */
     public void scheduleLr(LoanRecord lr) {
         // given that appt the parameter has so many relationships it is carrying...
@@ -47,7 +49,9 @@ public class LoanRecordService extends AbstractService<LoanRecord>{
     
     /**
      *
-     * @return
+     * Retrieves a list of all LoanRecord entities.
+     * 
+     * @return A list of LoanRecord entities.
      */
     public List<LoanRecord> findAll() {
         return super.findAll("LoanRecord.findAll");

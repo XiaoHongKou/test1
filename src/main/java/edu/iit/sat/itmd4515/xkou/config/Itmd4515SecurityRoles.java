@@ -6,22 +6,22 @@ package edu.iit.sat.itmd4515.xkou.config;
 
 /**
  *
- * @author sas
+ * @author xiaoh
  */
 public class Itmd4515SecurityRoles {
 
     /**
-     *
+     * ADMIN_ROLE
      */
     public static final String ADMIN_ROLE = "ADMIN_ROLE";
 
     /**
-     *
+     * TEACHER_ROLE
      */
     public static final String TEACHER_ROLE = "TEACHER_ROLE";
 
     /**
-     *
+     * BOOK_ROLE
      */
     public static final String BOOK_ROLE = "BOOK_ROLE";
     

@@ -16,7 +16,7 @@ import java.util.List;
 public class UserService extends AbstractService<User> {
 
     /**
-     *
+     * Default constructor initializing with User entity class.
      */
     public UserService() {
         super(User.class);
@@ -24,9 +24,20 @@ public class UserService extends AbstractService<User> {
     
     /**
      *
-     * @return
+     * Retrieves a list of all User entities.
+     * 
+     * @return A list of User entities.
      */
     public List<User> findAll(){
         return super.findAll("User.findAll");
+    }
+    
+    /**
+     * Creates a new user entity in the database.
+     *
+     * @param user The User entity to be persisted.
+     */
+    public void createUser(User user) {
+        em.persist(user); 
     }
 }

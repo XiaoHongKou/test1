@@ -18,15 +18,15 @@ import java.util.List;
 public class TeacherService extends AbstractService<Teacher> {
     
     /**
-     *
+     * Default constructor initializing with Teacher entity class.
      */
     public TeacherService() {
         super(Teacher.class);
     }
     
     /**
-     *
-     * @return
+     * Retrieves a list of all Teacher entities.
+     * @return A list of Teacher entities.
      */
     public List<Teacher> findAll() {
         return super.findAll("Teacher.findAll");
@@ -34,8 +34,10 @@ public class TeacherService extends AbstractService<Teacher> {
     
     /**
      *
-     * @param username
-     * @return
+     * Finds a Teacher entity by the username of its associated user.
+     * 
+     * @param username The username to search for.
+     * @return The Teacher entity associated with the specified username.
      */
     public Teacher findByUsername(String username){
         return em

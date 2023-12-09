@@ -31,7 +31,7 @@ public class TeacherWelcomeController {
     private Teacher teacher;
 
     /**
-     *
+     * Default constructor.
      */
     public TeacherWelcomeController() {
     }
@@ -44,7 +44,7 @@ public class TeacherWelcomeController {
     }
     
     /**
-     *
+     * Refreshes the authenticated Teacher's details.
      */
     public void refreshTeacher(){
         teacher = teacherSvc.findByUsername(loginController.getCurrentUser());
@@ -62,8 +62,7 @@ public class TeacherWelcomeController {
     /**
      * Set the value of owner
      *
-     * @param teacher
-     * @param owner new value of owner
+     * @param teacher The Teacher to be set.
      */
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;

@@ -23,10 +23,13 @@ public class BookConverter implements Converter<Book>{
     
     /**
      *
-     * @param context
-     * @param component
-     * @param value
-     * @return
+     * Converts a String value (such as an ID) to a Book object.
+     * This is typically used when converting form submission data back into entity objects.
+     * 
+     * @param context The FacesContext current instance.
+     * @param component The UIComponent with which this converter is associated.
+     * @param value The string value to be converted to a Book object.
+     * @return The Book object that corresponds to the provided string value.
      */
     @Override
     public Book getAsObject(FacesContext context, UIComponent component, String value) {
@@ -35,11 +38,13 @@ public class BookConverter implements Converter<Book>{
     }
 
     /**
+     * Converts a Book object to its String representation, typically the ID.
+     * This is used when rendering an entity as a string in the UI, such as in dropdown menus or links.
      *
-     * @param context
-     * @param component
-     * @param value
-     * @return
+     * @param context The FacesContext current instance.
+     * @param component The UIComponent with which this converter is associated.
+     * @param value The Book object to be converted to a string.
+     * @return A string representation of the Book object, typically its ID.
      */
     @Override
     public String getAsString(FacesContext context, UIComponent component, Book value) {

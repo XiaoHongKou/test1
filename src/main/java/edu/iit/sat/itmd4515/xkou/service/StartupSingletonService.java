@@ -41,9 +41,6 @@ public class StartupSingletonService {
     @EJB UserService userSvc;
     @EJB GroupService groupSvc;
     
-    /**
-     *
-     */
     public StartupSingletonService() {
     }
 

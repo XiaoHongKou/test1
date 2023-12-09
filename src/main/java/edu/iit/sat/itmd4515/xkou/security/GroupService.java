@@ -16,7 +16,7 @@ import java.util.List;
 public class GroupService extends AbstractService<Group> {
 
     /**
-     *
+     * Default constructor initializing with Group entity class.
      */
     public GroupService() {
         super(Group.class);
@@ -24,7 +24,9 @@ public class GroupService extends AbstractService<Group> {
     
     /**
      *
-     * @return
+     * Retrieves a list of all Group entities.
+     * 
+     * @return A list of Group entities.
      */
     public List<Group> findAll(){
         return super.findAll("Group.findAll");

@@ -30,7 +30,7 @@ public class BookWelcomeController {
     @EJB BookService bookSvc;
     
     /**
-     *
+     * Default constructor.
      */
     public BookWelcomeController() {
     }
@@ -46,23 +46,25 @@ public class BookWelcomeController {
     // utility or helpers
 
     /**
-     *
+     * Refreshes the Book information associated with the current user.
      */
     public void refreshTeacher(){
         book = bookSvc.findByUsername(loginController.getCurrentUser());
     }
    
     /**
+     * Gets the Book model for this controller.
      *
-     * @return
+     * @return The Book model.
      */
     public Book getBook() {
         return book;
     }
 
     /**
+     * Sets the Book model for this controller.
      *
-     * @param book
+     * @param book The Book to be set.
      */
     public void setBook(Book book) {
         this.book = book;

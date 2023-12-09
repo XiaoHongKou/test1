@@ -57,16 +57,17 @@ public class Teacher {
     private List<LoanRecord> lrs = new ArrayList<>();
     
     /**
-     *
+     * Default constructor for creating an empty Teacher instance.
      */
     public Teacher() {
     }
 
     /**
-     *
-     * @param name
-     * @param email
-     * @param birthDate
+     * Constructor for creating a Teacher instance with specified name, email, and birth date.
+     * 
+     * @param name The name of the teacher.
+     * @param email The email of the teacher.
+     * @param birthDate The birth date of the teacher.
      */
     public Teacher(String name, String email, LocalDate birthDate) {
         this.name = name;
@@ -76,7 +77,9 @@ public class Teacher {
 
     /**
      *
-     * @param s
+     * Adds a student to the teacher's list of students.
+     * 
+     * @param s The student to be added.
      */
     public void addStudent(Student s) {
         if (!this.students.contains(s)) {
@@ -90,7 +93,9 @@ public class Teacher {
 
     /**
      *
-     * @param s
+     * Removes a student from the teacher's list of students.
+     * 
+     * @param s The student to be removed.
      */
     public void removeStudent(Student s) {
 
@@ -104,16 +109,18 @@ public class Teacher {
     }
 
     /**
+     * Retrieves the unique identifier of the teacher.
      *
-     * @return
+     * @return The ID of the teacher.
      */
     public Long getId() {
         return id;
     }
 
     /**
+     * Sets a new identifier for the teacher.
      *
-     * @param id
+     * @param id The new ID to be set for the teacher.
      */
     public void setId(Long id) {
         this.id = id;
@@ -121,7 +128,9 @@ public class Teacher {
 
     /**
      *
-     * @return
+     * Generates a hash code for this teacher based on its ID.
+     * 
+     * @return A hash code value for this object.
      */
     @Override
     public int hashCode() {
@@ -132,8 +141,10 @@ public class Teacher {
 
     /**
      *
-     * @param obj
-     * @return
+     * Compares this teacher to another object for equality, based primarily on teacher ID.
+     * 
+     * @param obj The object to compare with this teacher.
+     * @return true if the given object represents a Teacher equivalent to this teacher, false otherwise.
      */
     @Override
     public boolean equals(Object obj) {
@@ -156,80 +167,90 @@ public class Teacher {
     }
 
     /**
+     * Retrieves the name of the teacher.
      *
-     * @return
+     * @return The name of the teacher.
      */
     public String getName() {
         return name;
     }
 
     /**
+     * Sets a new name for the teacher.
      *
-     * @param name
+     * @param name The new name to be set for the teacher.
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
+     * Retrieves the email address of the teacher.
      *
-     * @return
+     * @return The email address of the teacher.
      */
     public String getEmail() {
         return email;
     }
 
     /**
+     * Sets a new email address for the teacher.
      *
-     * @param email
+     * @param email The new email address to be set for the teacher.
      */
     public void setEmail(String email) {
         this.email = email;
     }
 
     /**
+     * Retrieves the birth date of the teacher.
      *
-     * @return
+     * @return The birth date of the teacher.
      */
     public LocalDate getBirthDate() {
         return birthDate;
     }
 
     /**
+     * Sets a new birth date for the teacher.
      *
-     * @param birthDate
+     * @param birthDate The new birth date to be set for the teacher.
      */
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
     /**
+     * Retrieves the list of students associated with the teacher.
      *
-     * @return
+     * @return A list of students associated with the teacher.
      */
     public List<Student> getStudents() {
         return students;
     }
 
     /**
+     * Sets a new list of students for the teacher.
      *
-     * @param students
+     * @param students The new list of students to be associated with the teacher.
      */
     public void setStudents(List<Student> students) {
         this.students = students;
     }
 
     /**
+     * Retrieves the list of loan records associated with the teacher.
      *
-     * @return
+     * @return A list of loan records associated with the teacher.
      */
     public List<LoanRecord> getLrs() {
         return lrs;
     }
 
     /**
+     * Sets a new list of loan records for the teacher.
      *
-     * @param lrs
+     * @param lrs The new list of loan records to be associated with the teacher.
      */
     public void setLrs(List<LoanRecord> lrs) {
         this.lrs = lrs;
@@ -237,7 +258,9 @@ public class Teacher {
 
     /**
      *
-     * @return
+     * Returns a string representation of the Teacher object, including its ID, name, email, and birth date.
+     * 
+     * @return A string representation of this teacher.
      */
     @Override
     public String toString() {
@@ -245,16 +268,18 @@ public class Teacher {
     }
 
     /**
+     * Retrieves the user account associated with the teacher.
      *
-     * @return
+     * @return The user account associated with the teacher.
      */
     public User getUser() {
         return user;
     }
 
     /**
+     * Sets a new user account for the teacher.
      *
-     * @param user
+     * @param user The new user account to be associated with the teacher.
      */
     public void setUser(User user) {
         this.user = user;

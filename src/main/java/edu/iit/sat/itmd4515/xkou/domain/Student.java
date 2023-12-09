@@ -49,16 +49,17 @@ public class Student {
     private List<Teacher> teachers = new ArrayList<>();
 
     /**
-     *
+     * Default constructor for creating an empty Student instance.
      */
     public Student() {
     }
 
     /**
-     *
-     * @param name
-     * @param admissionDate
-     * @param gender
+     * Constructor for creating a Student instance with a specified name, admission date, and gender.
+     * 
+     * @param name The name of the student.
+     * @param admissionDate The admission date of the student.
+     * @param gender The gender of the student.
      */
     public Student(String name, LocalDate admissionDate, StudentGender gender) {
         this.name = name;
@@ -87,56 +88,63 @@ public class Student {
     }
 
     /**
+     * Retrieves the name of the student.
      *
-     * @return
+     * @return The name of the student.
      */
     public String getName() {
         return name;
     }
 
     /**
+     * Sets a new name for the student.
      *
-     * @param name
+     * @param name The new name to be set for the student.
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
+     * Retrieves the admission date of the student.
      *
-     * @return
+     * @return The admission date of the student.
      */
     public LocalDate getAdmissionDate() {
         return admissionDate;
     }
 
-    /**
+     /**
+     * Sets a new admission date for the student.
      *
-     * @param admissionDate
+     * @param admissionDate The new admission date to be set for the student.
      */
     public void setAdmissionDate(LocalDate admissionDate) {
         this.admissionDate = admissionDate;
     }
 
     /**
+     * Retrieves the gender of the student.
      *
-     * @return
+     * @return The gender of the student.
      */
     public StudentGender getGender() {
         return gender;
     }
 
     /**
+     * Sets a new gender for the student.
      *
-     * @param gender
+     * @param gender The new gender to be set for the student.
      */
     public void setGender(StudentGender gender) {
         this.gender = gender;
     }
 
     /**
-     *
-     * @return
+     * Returns a string representation of the Student object.
+     * 
+     * @return A string representation of this student.
      */
     @Override
     public String toString() {
@@ -145,7 +153,9 @@ public class Student {
 
     /**
      *
-     * @return
+     * Generates a hash code for this student based on its ID.
+     * 
+     * @return A hash code value for this object.
      */
     @Override
     public int hashCode() {
@@ -155,9 +165,10 @@ public class Student {
     }
 
     /**
-     *
-     * @param obj
-     * @return
+     * Compares this student to another object for equality, based primarily on student ID.
+     * 
+     * @param obj The object to compare with this student.
+     * @return true if the given object represents a Student equivalent to this student, false otherwise.
      */
     @Override
     public boolean equals(Object obj) {
@@ -180,16 +191,18 @@ public class Student {
     }
 
     /**
-     *
-     * @return
+     * Retrieves the list of teachers associated with the student.
+     * 
+     * @return A list of teachers associated with the student.
      */
     public List<Teacher> getTeachers() {
         return teachers;
     }
 
     /**
-     *
-     * @param teachers
+     * Sets a new list of teachers for the student.
+     * 
+     * @param teachers The new list of teachers to be associated with the student.
      */
     public void setTeachers(List<Teacher> teachers) {
         this.teachers = teachers;

@@ -29,7 +29,7 @@ public class BookLrController {
     @EJB LoanRecordService lrSvc;
     
     /**
-     *
+     * Default constructor.
      */
     public BookLrController() {
     }
@@ -49,9 +49,10 @@ public class BookLrController {
     // MVC style action methods
 
     /**
+     * Prepares the controller with a specific LoanRecord and navigates to the readLr page.
      *
-     * @param lr
-     * @return
+     * @param lr The LoanRecord to be displayed.
+     * @return The navigation path to the readLr page.
      */
     public String displayReadLrPage(LoanRecord lr){
         this.lr = lr;
@@ -77,8 +78,9 @@ public class BookLrController {
 //    }
 
     /**
+     * Gets the LoanRecord model for this controller.
      *
-     * @return
+     * @return The LoanRecord model.
      */
 
     public LoanRecord getLr() {
@@ -86,8 +88,9 @@ public class BookLrController {
     }
 
     /**
+     * Sets the LoanRecord model for this controller.
      *
-     * @param lr
+     * @param lr The LoanRecord to be set.
      */
     public void setLr(LoanRecord lr) {
         this.lr = lr;

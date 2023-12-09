@@ -30,7 +30,7 @@ public class TeacherNewStudentController {
     private static final Logger LOG = Logger.getLogger(TeacherNewStudentController.class.getName());
     
     /**
-     *
+     * Default constructor.
      */
     public TeacherNewStudentController() {
     }
@@ -43,8 +43,9 @@ public class TeacherNewStudentController {
     }
     
     /**
+     * Demonstrates an action method, typically used for logging and testing purposes.
      *
-     * @return
+     * @return The navigation path for a confirmation page.
      */
     public String demoAction() {
         LOG.info("TeahcerNewStudentController.demlAction has been invoked with student + " + stu.toString());
@@ -53,9 +54,10 @@ public class TeacherNewStudentController {
     }
     
     /**
+     * Prepares the controller with a specific Student and navigates to the readStudent page.
      *
-     * @param s
-     * @return
+     * @param s The Student to be displayed.
+     * @return The navigation path to the readStudent page.
      */
     public String displayReadStudentPage(Student s) {
         this.stu = s;
@@ -66,9 +68,10 @@ public class TeacherNewStudentController {
     }
 
     /**
+     * Prepares the controller with a specific Student and navigates to the updateStudent page.
      *
-     * @param s
-     * @return
+     * @param s The Student to be updated.
+     * @return The navigation path to the updateStudent page.
      */
     public String displayUpdateStudentPage(Student s) {
         this.stu = s;
@@ -79,9 +82,10 @@ public class TeacherNewStudentController {
     }
 
     /**
+     * Prepares the controller with a specific Student and navigates to the deleteStudent page.
      *
-     * @param s
-     * @return
+     * @param s The Student to be deleted.
+     * @return The navigation path to the deleteStudent page.
      */
     public String displayDeleteStudentPage(Student s) {
         this.stu = s;
@@ -92,8 +96,9 @@ public class TeacherNewStudentController {
     }
     
     /**
+     * Saves the new or updated Student details.
      *
-     * @return
+     * @return The navigation path to the teacher welcome page.
      */
     public String saveStu(){
         LOG.info("TeahcerNewStudentController.saveStu has been invoked with stu + " + stu.toString() + "and" + twc.getTeacher().toString());
@@ -108,8 +113,9 @@ public class TeacherNewStudentController {
     }
     
     /**
+     * Updates the selected Student details.
      *
-     * @return
+     * @return The navigation path to the teacher welcome page.
      */
     public String updateStu() {
         LOG.info("TeahcerNewStudentController.updateStu has been invoked with pet + " + stu.toString() + " and " + twc.getTeacher().toString());
@@ -119,8 +125,9 @@ public class TeacherNewStudentController {
     }
 
     /**
+     * Deletes the selected Student.
      *
-     * @return
+     * @return The navigation path to the teacher welcome page.
      */
     public String deleteStu() {
         LOG.info("TeahcerNewStudentController.deleteStu has been invoked with pet + " + stu.toString() + " and " + twc.getTeacher().toString());
@@ -130,24 +137,27 @@ public class TeacherNewStudentController {
     }
     
     /**
+     * Retrieves all possible student gender values.
      *
-     * @return
+     * @return An array of all StudentGender enum values.
      */
     public StudentGender[] getAllStudentGenders(){
         return StudentGender.values();
     }
     
     /**
+     * Gets the Student model for this controller.
      *
-     * @return
+     * @return The Student model.
      */
     public Student getStu() {
         return stu;
     }
 
     /**
+     * Sets the Student model for this controller.
      *
-     * @param stu
+     * @param stu The Student to be set.
      */
     public void setStu(Student stu) {
         this.stu = stu;

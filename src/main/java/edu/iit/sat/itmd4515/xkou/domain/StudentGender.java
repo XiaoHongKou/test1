@@ -12,12 +12,12 @@ package edu.iit.sat.itmd4515.xkou.domain;
 public enum StudentGender {
 
     /**
-     *
+     * Represents male gender with label "Boy".
      */
     MAN("Boy"),
 
     /**
-     *
+     * Represents female gender with label "Girl".
      */
     WOMAN("Girl");
     
@@ -29,7 +29,9 @@ public enum StudentGender {
     
     /**
      *
-     * @return
+     * Retrieves the label associated with the gender.
+     * 
+     * @return The text label of this gender.
      */
     public String getLabel() {
         return label;

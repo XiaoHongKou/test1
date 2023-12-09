@@ -20,7 +20,10 @@ public class Demo {
 
     /**
      *
-     * @param args
+     * Main method initializes and persists a Student object using JPA, then prints its details before and after persistence.
+     * It demonstrates entity creation, transaction handling, and resource management in JPA context.
+     *
+     * @param args params
      */
     public static void main(String... args) {
         

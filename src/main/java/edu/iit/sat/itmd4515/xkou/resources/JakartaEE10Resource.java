@@ -6,14 +6,16 @@ import jakarta.ws.rs.core.Response;
 
 /**
  *
- * @author 
+ * @author  xiaoh
  */
 @Path("jakartaee10")
 public class JakartaEE10Resource {
     
     /**
      *
-     * @return
+     * Handles the HTTP GET request to check the availability of this service.
+     * 
+     * @return A Response object with a message indicating that the Jakarta EE service is reachable.
      */
     @GET
     public Response ping(){

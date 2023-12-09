@@ -24,56 +24,56 @@ public class BookService {
     private EntityManager em;
 
     /**
-     *
+     * Default constructor.
      */
     public BookService() {
     }
     
     /**
-     *
-     * @param b
+     * Persists the given Book entity into the database.
+     * @param b The Book entity to be persisted.
      */
     public void create(Book b) {
         em.persist(b);
     }    
 
     /**
-     *
-     * @param id
-     * @return
+     * Finds a Book entity by its ID.
+     * @param id The ID of the Book entity to find.
+     * @return The found Book entity or null if not found.
      */
     public Book read(Long id) {
         return em.find(Book.class, id);
     }
 
     /**
-     *
-     * @param b
+     * Updates the given Book entity in the database.
+     * @param b The Book entity to be updated.
      */
     public void update(Book b) {
         em.merge(b);
     }
 
     /**
-     *
-     * @param b
+     * Removes the given Book entity from the database.
+     * @param b The Book entity to be removed.
      */
     public void delete(Book b) {
         em.remove(em.merge(b));
     }
     
     /**
-     *
-     * @return
+     * Retrieves a list of all Book entities.
+     * @return A list of all Book entities.
      */
     public List<Book> findAll() {
         return em.createNamedQuery("Book.findAll", Book.class).getResultList();
     }
     
     /**
-     *
-     * @param username
-     * @return
+     * Finds a Book entity by the username of its associated user.
+     * @param username The username to search for.
+     * @return The Book entity associated with the specified username.
      */
     public Book findByUsername(String username){
         return em

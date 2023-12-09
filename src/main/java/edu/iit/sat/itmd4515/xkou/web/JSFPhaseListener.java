@@ -18,8 +18,9 @@ public class JSFPhaseListener implements PhaseListener {
     private static final Logger LOG = Logger.getLogger(JSFPhaseListener.class.getName());
 
     /**
+     * Specifies that this listener is interested in all JSF lifecycle phases.
      *
-     * @return
+     * @return The phase id for which this listener will be invoked.
      */
     @Override
     public PhaseId getPhaseId() {
@@ -27,8 +28,10 @@ public class JSFPhaseListener implements PhaseListener {
     }
 
     /**
+     * Executed before entering each phase of the JSF lifecycle.
+     * Logs the start of a new JSF request and the phase being entered.
      *
-     * @param event
+     * @param event The PhaseEvent object containing information about the current JSF lifecycle phase.
      */
     @Override
     public void beforePhase(PhaseEvent event) {
@@ -40,8 +43,10 @@ public class JSFPhaseListener implements PhaseListener {
     }
 
     /**
+     * Executed after each phase of the JSF lifecycle.
+     * Logs the completion of the phase and the completion of a JSF request.
      *
-     * @param event
+     * @param event The PhaseEvent object containing information about the current JSF lifecycle phase.
      */
     @Override
     public void afterPhase(PhaseEvent event) {

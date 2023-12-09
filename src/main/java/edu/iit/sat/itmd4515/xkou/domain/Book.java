@@ -48,30 +48,34 @@ public class Book {
     private List<LoanRecord> lrs = new ArrayList<>();
     
     /**
-     *
+     * Default constructor for creating an empty Book instance.
      */
     public Book() {
     }
 
     /**
+     *Constructor for creating a Book instance with a specified name.
      *
-     * @param name
+     * 
+     * @param name The name of the book.
      */
     public Book(String name) {
         this.name = name;
     }
     
     /**
+     * Retrieves the unique identifier of the book.
      *
-     * @return
+     * @return The ID of the book.
      */
     public Long getId() {
         return id;
     }
 
     /**
+     * Sets a new identifier for the book.
      *
-     * @param id
+     * @param id The new ID to be set for the book.
      */
     public void setId(Long id) {
         this.id = id;
@@ -79,7 +83,7 @@ public class Book {
 
     /**
      *
-     * @return
+     * @return A hash code value for this object.
      */
     @Override
     public int hashCode() {
@@ -90,8 +94,9 @@ public class Book {
 
     /**
      *
-     * @param obj
-     * @return
+     * @param obj object
+     * @return true if the given object represents a Book equivalent to this book, false otherwise.
+     *
      */
     @Override
     public boolean equals(Object obj) {
@@ -116,56 +121,63 @@ public class Book {
     }
 
     /**
+     * Retrieves the name of the book.
      *
-     * @return
+     * @return The name of the book.
      */
     public String getName() {
         return name;
     }
 
     /**
+     * Sets a new name for the book.
      *
-     * @param name
+     * @param name The new name to be set for the book.
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
+     * Retrieves the library associated with the book.
      *
-     * @return
+     * @return The library associated with the book.
      */
     public Library getLibrary() {
         return library;
     }
 
     /**
+     * Sets a new library for the book.
      *
-     * @param Library
+     * @param Library The library to be associated with the book.
      */
     public void setLibrary(Library Library) {
         this.library = Library;
     }
 
     /**
+     * Retrieves the list of loan records associated with the book.
      *
-     * @return
+     * @return A list of loan records associated with the book.
      */
     public List<LoanRecord> getLrs() {
         return lrs;
     }
 
     /**
+     * Sets a new list of loan records for the book.
      *
-     * @param lrs
+     * @param lrs The list of loan records to be associated with the book.
      */
     public void setLrs(List<LoanRecord> lrs) {
         this.lrs = lrs;
     }
 
     /**
+     * Returns a string representation of the Book object.
      *
-     * @return
+     * @return A string representation of this book.
      */
     @Override
     public String toString() {
@@ -173,16 +185,18 @@ public class Book {
     }
 
     /**
+     * Retrieves the user associated with the book.
      *
-     * @return
+     * @return The user associated with the book.
      */
     public User getUser() {
         return user;
     }
 
     /**
+     * Sets a new user for the book.
      *
-     * @param user
+     * @param user The user to be associated with the book.
      */
     public void setUser(User user) {
         this.user = user;

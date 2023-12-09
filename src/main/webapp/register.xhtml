@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./WEB-INF/template/demoTemplate.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:define name="title">
+        User Registration
+    </ui:define>
+
+    <ui:define name="content">
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel for="username" value="Username:" />
+                <h:inputText id="username" value="#{registrationBean.newUser.userName}" required="true" 
+                             requiredMessage="Username is required." />
+
+                <h:outputLabel for="password" value="Password:" />
+                <h:inputSecret id="password" value="#{registrationBean.newUser.password}" required="true" 
+                               requiredMessage="Password is required." />
+
+                <h:commandButton value="Register" action="#{registrationBean.register}" />
+            </h:panelGrid>
+
+            <h:messages globalOnly="true" layout="table" errorClass="error-message"/>
+        </h:form>
+    </ui:define>
+
+</ui:composition>

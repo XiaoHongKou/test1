@@ -21,7 +21,7 @@ import java.util.List;
 public class StudentService extends AbstractService<Student>{
 
     /**
-     *
+     * Default constructor initializing with Student entity class.
      */
     public StudentService() {
         super(Student.class);
@@ -29,7 +29,9 @@ public class StudentService extends AbstractService<Student>{
     
     /**
      *
-     * @return
+     * Retrieves a list of all Student entities.
+     * 
+     * @return A list of Student entities.
      */
     public List<Student> findAll() {
         return super.findAll("Student.findAll");
@@ -37,8 +39,10 @@ public class StudentService extends AbstractService<Student>{
     
     /**
      *
-     * @param s
-     * @param t
+     * Creates a Student entity and manages its relationships with a Teacher entity.
+     * 
+     * @param s The Student entity to be created.
+     * @param t The Teacher entity to be associated with the student.
      */
     public void createStudentAndManageRelationships(Student s, Teacher t){
         em.persist(s);
@@ -50,7 +54,9 @@ public class StudentService extends AbstractService<Student>{
     
     /**
      *
-     * @param s
+     * Updates a Student entity and manages its relationships.
+     * 
+     * @param s The Student entity with updated fields.
      */
     public void updatePetAndManageRelationships(Student s){
         // First step - we need a managed entity to work with in JPA
@@ -67,9 +73,9 @@ public class StudentService extends AbstractService<Student>{
     }
     
     /**
-     *
-     * @param s
-     * @param t
+     * Deletes a Student entity and manages its relationships, including removing related LoanRecords.
+     * @param s The Student entity to be deleted.
+     * @param t The Teacher entity associated with the student.
      */
     public void deleteStudentAndManageRelationships(Student s, Teacher t) {
         Student managedPetRef = em.getReference(Student.class, s.getId());

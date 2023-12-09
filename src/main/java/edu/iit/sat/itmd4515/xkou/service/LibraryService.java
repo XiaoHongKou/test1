@@ -16,7 +16,7 @@ import java.util.List;
 public class LibraryService extends AbstractService<Library>{
 
     /**
-     *
+     * Default constructor initializing with Library entity class.
      */
     public LibraryService() {
         super(Library.class);
@@ -24,7 +24,9 @@ public class LibraryService extends AbstractService<Library>{
     
     /**
      *
-     * @return
+     * Retrieves a list of all Library entities.
+     * 
+     * @return A list of Library entities.
      */
     public List<Library> findAll() {
         return super.findAll("Library.findAll");

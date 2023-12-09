@@ -29,7 +29,7 @@ public class TeacherLrController {
     @EJB LoanRecordService lrSvc;
     
     /**
-     *
+     * Default constructor.
      */
     public TeacherLrController() {
     }
@@ -49,9 +49,10 @@ public class TeacherLrController {
     // MVC style action methods
 
     /**
+     * Prepares the controller with a specific LoanRecord and navigates to the readLr page.
      *
-     * @param lr
-     * @return
+     * @param lr The LoanRecord to be displayed.
+     * @return The navigation path to the readLr page.
      */
     public String displayReadLrPage(LoanRecord lr){
         this.lr = lr;
@@ -60,9 +61,10 @@ public class TeacherLrController {
     }
     
     /**
+     * Prepares the controller for scheduling a LoanRecord for a specific student and navigates to the schedLr page.
      *
-     * @param s
-     * @return
+     * @param s The Student for whom the LoanRecord is to be scheduled.
+     * @return The navigation path to the schedLr page.
      */
     public String displaySchedLrPage(Student s){
         // set the model
@@ -72,8 +74,9 @@ public class TeacherLrController {
     }
     
     /**
+     * Saves the LoanRecord and refreshes the teacher data.
      *
-     * @return
+     * @return The navigation path to the teacher welcome page.
      */
     public String saveLr(){
         LOG.info("TeacherLrController.saveAppt with " + lr.toString());
@@ -86,16 +89,18 @@ public class TeacherLrController {
     }
 
     /**
+     * Gets the LoanRecord model for this controller.
      *
-     * @return
+     * @return The LoanRecord model.
      */
     public LoanRecord getLr() {
         return lr;
     }
 
     /**
+     * Sets the LoanRecord model for this controller.
      *
-     * @param lr
+     * @param lr The LoanRecord to be set.
      */
     public void setLr(LoanRecord lr) {
         this.lr = lr;

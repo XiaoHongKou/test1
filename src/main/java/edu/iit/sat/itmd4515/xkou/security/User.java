@@ -42,16 +42,18 @@ public class User {
     private List<Group> groups = new ArrayList<>();
 
     /**
-     *
+     * Default constructor for creating an empty User instance.
      */
     public User() {
     }
 
     /**
      *
-     * @param userName
-     * @param password
-     * @param enabled
+     * Constructor for creating a User instance with a specified username, password, and enabled status.
+     * 
+     * @param userName The username for the user.
+     * @param password The password for the user.
+     * @param enabled The enabled status of the user.
      */
     public User(String userName, String password, Boolean enabled) {
         this.userName = userName;
@@ -61,7 +63,9 @@ public class User {
 
     /**
      *
-     * @param g
+     * Adds a security group to the user.
+     * 
+     * @param g The group to be added.
      */
     public void addGroup(Group g) {
         this.groups.add(g);
@@ -69,8 +73,9 @@ public class User {
     }
     
     /**
-     *
-     * @param g
+     * Removes a security group from the user.
+     * 
+     * @param g The group to be removed.
      */
     public void removeGroup(Group g) {
         this.groups.remove(g);
@@ -97,7 +102,9 @@ public class User {
 
     /**
      *
-     * @return
+     * Retrieves the password of the user.
+     * 
+     * @return The password of the user.
      */
     public String getPassword() {
         return password;
@@ -105,7 +112,9 @@ public class User {
 
     /**
      *
-     * @param password
+     * Sets a new password for the user.
+     * 
+     * @param password The new password to be set.
      */
     public void setPassword(String password) {
         this.password = password;
@@ -113,7 +122,9 @@ public class User {
 
     /**
      *
-     * @return
+     * Checks if the user is enabled.
+     * 
+     * @return The enabled status of the user.
      */
     public Boolean isEnabled() {
         return enabled;
@@ -121,7 +132,9 @@ public class User {
 
     /**
      *
-     * @param enabled
+     * Sets the enabled status of the user.
+     * 
+     * @param enabled The new enabled status to be set.
      */
     public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
@@ -129,7 +142,9 @@ public class User {
 
     /**
      *
-     * @return
+     * Retrieves the list of security groups associated with the user.
+     * 
+     * @return A list of groups associated with the user.
      */
     public List<Group> getGroups() {
         return groups;
@@ -137,7 +152,9 @@ public class User {
 
     /**
      *
-     * @param groups
+     * Sets a new list of security groups for the user.
+     * 
+     * @param groups The new list of groups to be set for the user.
      */
     public void setGroups(List<Group> groups) {
         this.groups = groups;

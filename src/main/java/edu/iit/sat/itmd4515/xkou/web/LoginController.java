@@ -41,7 +41,7 @@ public class LoginController {
     FacesContext facesContext;
 
     /**
-     *
+     * Default constructor.
      */
     public LoginController() {
     }
@@ -55,32 +55,36 @@ public class LoginController {
     //helper method
 
     /**
+     * Retrieves the current logged-in username.
      *
-     * @return
+     * @return The username of the current user.
      */
     public String getCurrentUser(){
         return facesContext.getExternalContext().getRemoteUser();
     }
     
     /**
+     * Checks if the current user has an admin role.
      *
-     * @return
+     * @return True if the user has an admin role, false otherwise.
      */
     public boolean isAdmin() {
         return securityContext.isCallerInRole(Itmd4515SecurityRoles.ADMIN_ROLE);
     }
 
     /**
+     * Checks if the current user has a teacher role.
      *
-     * @return
+     * @return True if the user has a teacher role, false otherwise.
      */
     public boolean isTeacher() {
         return securityContext.isCallerInRole(Itmd4515SecurityRoles.TEACHER_ROLE);
     }
 
     /**
+     * Checks if the current user has a book role.
      *
-     * @return
+     * @return True if the user has a book role, false otherwise.
      */
     public boolean isBook() {
         return securityContext.isCallerInRole(Itmd4515SecurityRoles.BOOK_ROLE);
@@ -89,8 +93,9 @@ public class LoginController {
     // action methods
 
     /**
+     * Performs the login action.
      *
-     * @return
+     * @return The navigation path for the next page based on the login result.
      */
     public String doLogin() {
         LOG.info("LoginController.doLogin() with " + user.getUserName());
@@ -127,8 +132,9 @@ public class LoginController {
     }
 
     /**
+     * Performs the logout action.
      *
-     * @return
+     * @return The navigation path for the login page.
      */
     public String doLogout() {
 
@@ -145,16 +151,18 @@ public class LoginController {
     }
 
     /**
+     * Gets the User model for this controller.
      *
-     * @return
+     * @return The User model.
      */
     public User getUser() {
         return user;
     }
 
     /**
+     * Sets the User model for this controller.
      *
-     * @param user
+     * @param user The User to be set.
      */
     public void setUser(User user) {
         this.user = user;
